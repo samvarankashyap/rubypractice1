@@ -1,14 +1,17 @@
 ApplicationSkr::Application.routes.draw do
+
   get 'welcome/index'
 
   scope :api do
     get "/persondetails(.:format)" => "persondetails#index"
     get "/persondetails/:id(.:format)" => "persondetails#show"
+    get "/persongrades/:id(.:format)" => "persongrades#index"
   end
  root to: "welcome#index"
 end
 
 #Rails.application.routes.draw do
+
 #  get 'welcome/index'
 
 #  resources :person_details
